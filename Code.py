@@ -1,13 +1,19 @@
-class Color:
-    color_count = 0
-    def __init__(self, red, blue, yellow) -> None:
-        Color.color_count += 1
-        self.red = red
-        self.blue = blue
-        self.yellow = yellow
+from tkinter import *
 
-red = Color(255,0,0)
+window = Tk()
+window.minsize(200,200)
 
-print(red.red)
-print(red.blue)
-print(red.yellow)
+def add(num1: int, num2: int) -> int:
+    """add two numbers"""
+    num3 = num1 + num2
+
+    return num3
+
+num1, num2 = 5, 15
+ans = add(num1 , num2)
+print(f"The addition of {num1} and {num2} resuts {ans}")
+
+text = Label(text=ans, font="TkDefaultFont")
+text.pack()
+
+mainloop()
