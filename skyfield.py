@@ -1,11 +1,13 @@
-from tkinter import *
+import tkinter as tk
+import tkinter.messagebox as msg
 
-window_1 = Tk()
+window_1 = tk.Tk()
 
 class window():
     def __init__(self, height, width) -> None:
         self.height = height
         self.width = width
+
 
 def hello():
     print("hello World!")
@@ -16,9 +18,8 @@ new_window = window(height=50,width=50)
 
 print(new_window.height)
 
-text = Label(window_1, text=window_1)
-text1 = Label(text=new_window.width)
-text.pack()
+text1 = tk.Label(text=new_window.width)
 text1.pack()
 
-mainloop()
+tk.mainloop()
+
